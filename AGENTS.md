@@ -84,6 +84,12 @@ Only these two exceptions exist.
 
 If no engine skill exists for the game, say so and ask the owner before you go on. Then read [unknown-engine](skills/unknown-engine/SKILL.md).
 
+## Running the tool
+
+- Developers run the tool directly with Python, inside the project's own venv (`uv venv .venv`, then `uv pip install -p .venv/bin/python ...`).
+- Run it as `.venv/bin/python -m <tool> <command>`. Do not build a binary for this.
+- A binary is for real players, who do not have Python. Build one only when the owner asks for a player package. It is a copy of the same Python code, packed with PyInstaller. One binary works only on the system it is built on, so a Windows binary needs a Windows machine.
+
 ## Reporting
 
 When you finish, report:
