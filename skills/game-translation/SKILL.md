@@ -68,7 +68,8 @@ Copy this template and fill it in. Ask the owner for each answer.
 
 ```text
 understand -> notes -> build tool -> backup -> extract -> translate
-  -> audit -> dry run -> apply -> verify -> restore test -> package
+  -> audit -> owner review -> dry run -> apply -> verify -> restore test
+  -> package
 ```
 
 ## Steps
@@ -82,11 +83,12 @@ understand -> notes -> build tool -> backup -> extract -> translate
 | 5 | Extract text (read-only) | [build-game-tool](../build-game-tool/SKILL.md) | Catalog files |
 | 6 | Translate | This page | `target` column filled |
 | 7 | Audit | This page | No errors |
-| 8 | Dry run | This page | List of planned changes |
-| 9 | Apply | This page | Patched game |
-| 10 | Verify | This page | Values match the catalog |
-| 11 | Restore test | This page | Originals and hashes match |
-| 12 | Package | [install-uninstall](../install-uninstall/SKILL.md) | Player package, no game files |
+| 8 | Owner review | This page | Owner approval, recorded in `OWNER-CHOICES.md` |
+| 9 | Dry run | This page | List of planned changes |
+| 10 | Apply | This page | Patched game |
+| 11 | Verify | This page | Values match the catalog |
+| 12 | Restore test | This page | Originals and hashes match |
+| 13 | Package | [install-uninstall](../install-uninstall/SKILL.md) | Player package, no game files |
 
 Also read the engine skill when the engine matches, for example [unity](../unity/SKILL.md).
 
@@ -125,30 +127,48 @@ Also read the engine skill when the engine matches, for example [unity](../unity
 - Check for empty targets, changed placeholders, leftover source-language text, and long lines.
 - Stop on any error. Fix it, then audit again.
 
-### 8. Dry run
+### 8. Owner review
+
+- Show the owner a sample of translated lines. Include lines with placeholders and long lines.
+- Wait for approval. Do not apply before it.
+- Record the answer in `docs/OWNER-CHOICES.md`.
+
+### 9. Dry run
 
 - Run the tool in dry-run mode.
 - Read the list of planned changes. Check that only the expected files appear.
 
-### 9. Apply
+### 10. Apply
 
 - Apply only after the dry run looks right.
 - The tool refuses to run while the game is open, or when the version does not match.
 
-### 10. Verify
+### 11. Verify
 
 - Reload each changed file from disk.
 - Compare each value with the catalog.
 - Report success only after this check passes.
 
-### 11. Restore test
+### 12. Restore test
 
 - On a copy of the game, restore the originals from `<game>/original/`.
 - Check that each restored file matches its hash in `manifest.json`.
 
-### 12. Package
+### 13. Package
 
 - Follow `skills/install-uninstall/SKILL.md`.
+
+## Fonts
+
+- Check that the game font has the glyphs of the target language. Use a glyph list or a font viewer.
+- If a glyph is missing, ask the owner before you add a font.
+- Record the font and its licence in `docs/GAME-NOTES.md`.
+
+## Run-time plugins
+
+- If the owner keeps a plugin, such as AutoTranslator or BepInEx, back up its config files too.
+- Test the game with the plugin on and off.
+- Record the owner's decision in `docs/OWNER-CHOICES.md`.
 
 ## Rules
 

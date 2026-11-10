@@ -111,6 +111,23 @@ Example layout:
 5. Run restore on the copy. Check the hashes.
 6. Only then consider the live game, and only with the owner's approval.
 
+## Build binaries
+
+Players get one binary per OS. Build it with PyInstaller, run through `uv`.
+
+```bash
+uv run --with pyinstaller pyinstaller --onefile --name <game-slug>-translator tool/main.py
+```
+
+| Rule | Why |
+|---|---|
+| Build on each OS | A binary runs only on the system it was built for. |
+| Name it `<game-slug>-translator` | Matches the Naming rule in `AGENTS.md`. |
+| A Windows build needs a Windows machine | The build tool cannot cross-build. |
+
+> [!NOTE]
+> `tool/main.py` is an example path. Use the entry script of the game's tool.
+
 ## Rules
 
 - One tool per game.

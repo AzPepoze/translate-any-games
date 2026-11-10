@@ -24,7 +24,7 @@ Study the game first. Write no tool until these notes exist.
 | 6 | Loading and saving | Find how the game reads its data and saves progress. |
 | 7 | Save compatibility | Decide whether a change to text could change a save file. |
 | 8 | Checksums | Record SHA-256 for every file you may touch. |
-| 9 | Run-time text changes | Look for mods that change text while the game runs, such as AutoTranslator, ReiPatcher, BepInEx, or other plugin folders, and their config files. Note each one found. Ask the owner if it should stay active with the translation. Do not guess. |
+| 9 | Run-time text changes | Look for mods that change text while the game runs, such as AutoTranslator, ReiPatcher, BepInEx, or other plugin folders, and their config files. Note each one found. Ask the owner if it should stay active with the translation. Do not guess. Note its config files too: they are backed up with the game. |
 | 10 | Unknowns | List every open question for the owner. |
 
 ## Save-file check
