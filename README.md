@@ -5,8 +5,8 @@ Instructions for AI. They help it write a translation by using their own tool fo
 # Disclaimer
 
 > [!IMPORTANT]
-> This repo is for personal use. It is shared as is. It is not maintained, and no updates or support are planned.
-> If you need something changed, fork the repo and do it yourself.
+> This is a personal project, shared as is. I don't plan to maintain it or add updates.
+> Feel free to fork it and make your own changes.
 > It is not affiliated with any game developer or publisher.
 
 > [!WARNING]
