@@ -82,7 +82,7 @@ Only these two exceptions exist.
 | 4 | [install-uninstall](skills/install-uninstall/SKILL.md) | Before you make the player package |
 | 5 | Engine skill, for example [unity](skills/unity/SKILL.md) | Only when the engine matches |
 
-If no engine skill exists for the game, say so and ask the owner before you go on.
+If no engine skill exists for the game, say so and ask the owner before you go on. Then read [unknown-engine](skills/unknown-engine/SKILL.md).
 
 ## Reporting
 

@@ -40,4 +40,5 @@ Instructions for AI. They help it write a translation by using their own tool fo
 | Write the game's tool | [build-game-tool](skills/build-game-tool/SKILL.md) |
 | Player package | [install-uninstall](skills/install-uninstall/SKILL.md) |
 | Unity games | [unity](skills/unity/SKILL.md) |
+| Other engines | [unknown-engine](skills/unknown-engine/SKILL.md) |
 | Shared image text helper | [image-text](skills/image-text/SKILL.md) |
