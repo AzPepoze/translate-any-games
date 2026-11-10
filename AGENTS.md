@@ -43,6 +43,14 @@ Each game has its own project. Nothing is shared.
 
 Keep the project folder outside this repo.
 
+### Naming
+
+- Name each game's tool `<game-slug>-translator`.
+  - Binary: `<game-slug>-translator`.
+  - Windows: `<game-slug>-translator.exe`.
+- Never use `tag`, `tool`, or any other generic name for a game's tool.
+- Use the same name in the player launchers and the player README.
+
 ### Exceptions
 
 Only these two exceptions exist.
