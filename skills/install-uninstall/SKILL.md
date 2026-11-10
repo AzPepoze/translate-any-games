@@ -14,8 +14,8 @@ Make a player package for one game. The package holds the translation, never the
 ```text
 <game>-<lang>-package/
   bin/
-    <tool>-linux-x86_64
-    <tool>-windows-x86_64.exe
+    <game-slug>-translator-linux-x86_64
+    <game-slug>-translator-windows-x86_64.exe
   catalogs/
   install.sh
   uninstall.sh
@@ -26,10 +26,18 @@ Make a player package for one game. The package holds the translation, never the
 
 | Part | Content |
 |---|---|
-| `bin/` | One binary per OS. |
+| `bin/` | One binary per OS, named `<game-slug>-translator`. |
 | `catalogs/` | The translated text and images. |
 | Launchers | Four scripts. See below. |
 | `README.md` | Short steps for players. |
+
+## Backup layout
+
+Install uses the same backup layout as the tool. See [build-game-tool](../build-game-tool/SKILL.md).
+
+- Back up into `<game>/original/` with `manifest.json`.
+- If a backup already exists, keep it. Never overwrite it.
+- Uninstall restores from that backup and checks each SHA-256 hash.
 
 ## Launchers
 
@@ -45,7 +53,7 @@ Make a player package for one game. The package holds the translation, never the
 
 ## Player steps
 
-Put in `README.md`:
+Put in `README.md`. Name the tool `<game-slug>-translator`, the same name the launchers use.
 
 1. Close the game.
 2. Copy this folder next to the game folder, or into it.
@@ -59,6 +67,8 @@ Put in `README.md`:
 | One binary per OS | A binary runs only on the system it was built for. |
 | A Windows build needs a Windows machine | The build tool cannot cross-build. |
 | No game files in the package | The owner ships no game content. |
+| Shipped text: `target` only | The package may hold translated strings and images, never the `source` column. If the tool needs the source to match a row, ship its hash instead. |
+| Fonts: only with a licence | Ship a font only if its licence allows redistribution. Otherwise tell the player where to get it. |
 | No personal paths in the package | Protects the owner's privacy. |
 
 > [!WARNING]

@@ -16,6 +16,7 @@ This repo holds instructions only. No tool is shared. You write a new tool for e
    - Never overwrite an existing backup.
 4. **Patch the live game in place. Never clone or redistribute it.**
    - Test on a copy. Ship no game files.
+   - The player package may hold translated text and images, never the source text.
 5. **Verify after writing.**
    - Reload the changed files from disk and compare them with the catalog.
    - Never report success from a write alone.
