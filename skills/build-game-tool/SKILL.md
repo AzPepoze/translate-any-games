@@ -27,6 +27,17 @@ uv pip install -p .venv/bin/python <packages>
 > [!WARNING]
 > Test on a copy of the game, never the live one.
 
+## Shared code
+
+Each game has its own tool. Only two exceptions exist:
+
+| Exception | Rule |
+|---|---|
+| Shared helper | `skills/image-text/overlay.py` may be used by any game. Keep the game's image config, fonts, and output images in its own project. |
+| Owner-approved code copy | Copy engine code from another project only after the owner approves it in writing for that game. The copy is then independent. Record the approval and the source in `docs/GAME-NOTES.md`. |
+
+For image text, see [image-text](../image-text/SKILL.md).
+
 ## What the tool must do
 
 | # | Requirement | Detail |

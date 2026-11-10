@@ -40,6 +40,33 @@ Facts about Unity games in general. Write no code from this page.
 - The asset file keeps an offset and a size for that data.
 - Changing the size of streamed data changes the offsets. Check the size before you write.
 
+## Images
+
+> [!IMPORTANT]
+> Read the texture format from the file. Do not guess it from the brief.
+
+- Textures can be streamed. The pixels live in a `.resS` file next to the `.assets` file.
+- The `.assets` file stores the offset and size of the pixels.
+- A replacement must use the same byte size.
+  - Re-encode every mip level.
+  - Keep the mip chain length.
+- Texture format numbers:
+
+| Number | Format |
+|---|---|
+| 4 | RGBA32 |
+| 10 | DXT1 |
+| 12 | DXT5 |
+
+- Check each replacement after writing:
+  - Decode the texture from disk.
+  - Compare it with the PNG.
+  - Accept a mean per-channel difference of 4.0 or less.
+  - Lossy formats (DXT) can differ a little.
+- Loose PNG files in the game folder are plain files.
+  - Back them up and replace them whole.
+  - Their text may appear in a manual or screenshot. Ask the owner first, because that is a separate decision.
+
 ## Textures
 
 - Images are `Texture2D` objects in the asset files.
