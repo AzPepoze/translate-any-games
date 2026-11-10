@@ -15,9 +15,54 @@ Read `AGENTS.md` first. It holds the non-negotiable rules.
 |---|---|
 | Project | The folder for one game: notes, catalog, glossary, tool, venv. |
 | Catalog | CSV files that hold each string. You edit only `target` and `notes`. |
+| Glossary | `glossary.csv`. One row per terminology decision. |
+| Owner choices | `docs/OWNER-CHOICES.md`. The owner's answers. |
 | Backup | Copies of the original files in `<game>/original/`, with `manifest.json`. |
 | Dry run | A preview. It lists the changes and writes nothing. |
 | Restore test | Put the originals back and check the hashes. |
+
+## File formats
+
+### Catalog CSV
+
+| Rule | Value |
+|---|---|
+| Encoding | UTF-8 |
+| Line endings | LF |
+| Quoting | Quote every field |
+| Columns | `id,file,kind,source,target,notes` |
+| `id` | Stable across re-extracts. Never change it. |
+| `kind` | `text`, `image` or `code` |
+| Edited by hand | `target` and `notes` only |
+
+### glossary.csv
+
+| Column | Content |
+|---|---|
+| `term` | The source term |
+| `translation` | The chosen translation |
+| `context` | Where it is used |
+| `note` | Why this choice was made |
+
+### docs/OWNER-CHOICES.md
+
+Copy this template and fill it in. Ask the owner for each answer.
+
+```markdown
+# Owner choices: <game name>
+
+| Choice | Answer |
+|---|---|
+| Target language (with code, for example `de`) | |
+| Scope (what to translate) | |
+| Quality level | |
+| Lore: how much to keep | |
+| Run-time plugin: keep active? | |
+| Font | |
+| Shipped text | |
+| Save test approved | |
+| Live game approved | |
+```
 
 ## Workflow
 

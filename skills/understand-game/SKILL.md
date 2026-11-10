@@ -48,6 +48,8 @@ Study the game first. Write no tool until these notes exist.
 
 Write `docs/GAME-NOTES.md` in the game's project folder. Use the template below.
 
+Record the owner's answers in `docs/OWNER-CHOICES.md`. The template is in [game-translation](../game-translation/SKILL.md).
+
 ## Template: docs/GAME-NOTES.md
 
 ```markdown
