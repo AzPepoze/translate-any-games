@@ -51,7 +51,7 @@ Also read the engine skill when the engine matches, for example [unity](../unity
 
 - Follow `skills/understand-game/SKILL.md`.
 - Ask the owner about anything unclear. Do not guess.
-- Ask the owner three things: scope, quality level, and how much lore to keep.
+- Ask the owner four things: target language, scope, quality level, and how much lore to keep.
 - Record the answers in `docs/OWNER-CHOICES.md`.
 
 ### 3. Build the game's tool

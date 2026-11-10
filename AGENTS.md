@@ -10,7 +10,7 @@ This repo holds instructions only. No tool is shared. You write a new tool for e
 1. **Understand the game before you write any tool.**
    - Study the files, formats, and save data first. See `skills/understand-game/SKILL.md`.
 2. **Ask when anything is unclear. Never guess.**
-   - Ask about engine version, scope, quality, and anything you cannot confirm from the files.
+   - Ask about target language, engine version, scope, quality, and anything you cannot confirm from the files.
 3. **Back up every file before the first write.**
    - Backups go to `<game>/original/` with a `manifest.json` of SHA-256 hashes.
    - Never overwrite an existing backup.
