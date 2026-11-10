@@ -9,6 +9,11 @@ description: Use when packaging a finished translation for players. Covers the p
 
 Make a player package for one game. The package holds the translation, never the game.
 
+## Who needs a binary
+
+- Only players need a binary. They do not have Python.
+- Developers do not. They run the tool with `.venv/bin/python`. See [build-game-tool](../build-game-tool/SKILL.md).
+
 ## Package layout
 
 ```text

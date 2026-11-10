@@ -15,14 +15,14 @@ Read `AGENTS.md` and `docs/GAME-NOTES.md` first.
 
 - Language: Python.
 - Use `uv`. Never use system-wide pip.
-- Create the venv inside the project:
+- Developers run the tool with Python, inside the project's own venv. Create it inside the project:
 
 ```bash
 uv venv .venv
 uv pip install -p .venv/bin/python <packages>
 ```
 
-- Run the tool with `.venv/bin/python`.
+- Run the tool with `.venv/bin/python -m <tool> <command>`.
 - Name the tool `<game-slug>-translator`. Do not use `tag` or a generic name.
 
 > [!WARNING]
@@ -113,7 +113,7 @@ Example layout:
 
 ## Build binaries
 
-Players get one binary per OS. Build it with PyInstaller, run through `uv`.
+Build a binary only when the owner asks for a player package. Developers do not need one. Players get one binary per OS. Build it with PyInstaller, run through `uv`.
 
 ```bash
 uv run --with pyinstaller pyinstaller --onefile --name <game-slug>-translator tool/main.py
