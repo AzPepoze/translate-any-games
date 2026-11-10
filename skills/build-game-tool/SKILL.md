@@ -23,6 +23,7 @@ uv pip install -p .venv/bin/python <packages>
 ```
 
 - Run the tool with `.venv/bin/python`.
+- Name the tool `<game-slug>-translator`. Do not use `tag` or a generic name.
 
 > [!WARNING]
 > Test on a copy of the game, never the live one.
