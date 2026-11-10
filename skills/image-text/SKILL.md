@@ -17,6 +17,12 @@ uv run skills/image-text/overlay.py /path/to/project/images.json
 ```
 
 - `uv` reads the script's dependencies (Pillow) on its own. You do not need a venv.
+
+To run the tests:
+
+```bash
+uv run --with pytest --with pillow pytest skills/image-text
+```
 - Paths in the config are relative to the config file's folder.
 
 ## Exit codes
