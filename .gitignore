@@ -4,3 +4,13 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+
+# Game folders and game files
+original/
+games/
+*.assets
+*.resS
+*.dll
+*.exe
+*.pak
+*.unity3d
