@@ -43,6 +43,18 @@ Each game has its own project. Nothing is shared.
 
 Keep the project folder outside this repo.
 
+### Exceptions
+
+Only these two exceptions exist.
+
+| Exception | Rule |
+|---|---|
+| Shared helper | `skills/image-text/overlay.py` may be used by any game. Each game keeps its own image config, fonts, and output images in its own project. |
+| Owner-approved code copy | A game tool may copy engine code from another project only after the owner approves it in writing for that game. The copy is then independent. Record the approval and the source in `<project>/docs/GAME-NOTES.md`. |
+
+> [!NOTE]
+> Any other sharing needs a new decision from the owner first.
+
 ## Privacy
 
 > [!WARNING]
